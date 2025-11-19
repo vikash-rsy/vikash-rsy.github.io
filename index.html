@@ -4,121 +4,276 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vikash Yadav | Technical Program Manager</title>
+    
     <style>
+        /* Variables and Global Styles (High Contrast Dark Theme) */
+        :root {
+            --bg-dark: #121212; /* Deep background */
+            --bg-light: #1e1e1e; /* Card background */
+            --text-primary: #f0f0f0; /* Light text */
+            --accent-cyan: #00bcd4; /* Cyan/Blue Accent (Similar to reference) */
+            --text-muted: #999999;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: var(--font-main);
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
-            color: #333;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
         }
-        header {
-            background: #333;
-            color: white;
-            padding: 50px 20px;
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        /* 1. HEADER & INTRODUCTION */
+        .header {
             text-align: center;
+            padding: 40px 0;
+            background: var(--bg-light);
+            margin-bottom: 30px;
+            border-bottom: 5px solid var(--accent-cyan);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
-        header h1 {
+        .header h1 {
+            font-size: 3.5em;
             margin: 0;
-            font-size: 3em;
+            color: var(--accent-cyan);
+            letter-spacing: 1.5px;
         }
-        header p {
+        .header h2 {
+            font-size: 1.5em;
+            color: var(--text-primary);
+            margin: 5px 0 15px 0;
+        }
+        .summary-box {
+            max-width: 800px;
+            margin: 15px auto;
+            color: var(--text-muted);
+            font-size: 1.1em;
+        }
+        
+        /* 2. CONTACT LINKS */
+        .contact-links a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        .contact-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* 3. SPLIT LAYOUT FOR MAIN CONTENT */
+        .main-content {
+            display: flex;
+            gap: 30px;
+        }
+        .left-column {
+            flex: 1; /* Takes 1/3 of space */
+        }
+        .right-column {
+            flex: 2; /* Takes 2/3 of space */
+        }
+
+        /* 4. SECTION STYLING */
+        h3 {
+            color: var(--accent-cyan);
+            border-bottom: 2px solid #333;
+            padding-bottom: 8px;
+            margin-top: 35px;
+            font-size: 1.6em;
+        }
+        
+        /* 5. EXPERIENCE CARDS */
+        .job-card {
+            background: var(--bg-light);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-cyan);
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+        .job-card:hover {
+            transform: translateY(-3px); /* Subtle lift on hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        .job-card h4 {
+            margin: 0 0 5px 0;
             font-size: 1.2em;
+        }
+        .job-card .tenure {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: block;
+        }
+        .job-card ul {
+            padding-left: 20px;
+            list-style: disc;
+            font-size: 0.95em;
+        }
+
+        /* 6. SKILLS CHIPS */
+        .skill-group {
+            background: var(--bg-light);
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+        .skill-chips-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-top: 10px;
         }
-        section {
-            padding: 40px 20px;
-            text-align: center;
+        .chip {
+            background-color: var(--accent-cyan);
+            color: var(--bg-dark);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
         }
-        section h2 {
-            font-size: 2em;
-            color: #333;
+        
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .header h1 {
+                font-size: 2.5em;
+            }
         }
-        section p {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.6;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .contact-info {
-            font-size: 1.2em;
-        }
-        .contact-info a {
-            color: #00aaff;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            font-size: 1.5em;
-            margin: 0 10px;
-            color: #333;
-            text-decoration: none;
-        }
-        .social-links a:hover {
-            color: #00aaff;
+        
+        /* Optional: Style for a profile photo if added later */
+        .header img {
+            width: 100px; 
+            height: 100px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 15px; 
+            border: 3px solid var(--accent-cyan);
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Vikash Yadav</h1>
-        <p>Technical Program Manager | Problem Solver | Innovator</p>
-    </header>
-
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I’m Vikash, a passionate and results-driven Technical Program Manager with a strong background in software development and project management. I thrive on solving complex problems, leading teams, and delivering successful projects that create lasting impact.</p>
-        <p>My experience spans Agile methodologies, cross-functional team leadership, and building scalable systems. I’m always focused on driving innovation and efficiency in every project I take on.</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills & Expertise</h2>
-        <p>• Agile & Scrum Methodologies</p>
-        <p>• Technical Leadership</p>
-        <p>• Project Management (Jira, Trello, Asana)</p>
-        <p>• Cloud Computing (AWS, Azure)</p>
-        <p>• Risk Management</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>• **Cloud Migration**: Led the successful migration of a legacy application to a cloud-based infrastructure.</p>
-        <p>• **Agile Transformation**: Spearheaded an Agile transformation initiative, improving delivery speed by 30%.</p>
-        <p>• **Software Optimization**: Improved the performance of a critical application, reducing response time by 40%.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p class="contact-info">Email: <a href="mailto:vikashrsy@gmail.com">vikashrsy@gmail.com</a></p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/vikashyadav21/" target=""https://www.linkedin.com/in/vikashyadav21/">LinkedIn</a>
-            <a href="https://github.com/vikash-rsy" target="https://github.com/vikash-rsy">GitHub</a>
+    <div class="container">
+        
+        <div class="header">
+            <h1>Vikash Yadav</h1>
+            <h2>Technical Program Manager & Certified ScrumMaster®</h2>
+            <div class="contact-links">
+                <a href="mailto:vikashrsy@gmail.com">vikashrsy@gmail.com</a> |
+                <a href="https://linkedin.com/in/vikashyadav21/" target="_blank">LinkedIn Profile</a> |
+                <span>New Delhi, India</span>
+            </div>
+            <div class="summary-box">
+                <p>
+                    **7+ years** of demonstrated success delivering large-scale digital programs across **Fintech, Insurance, and Travel Tech**. Proven ability to drive Agile transformation, achieving **95%+ on-time delivery** and up to **20% faster time-to-market**.
+                </p>
+            </div>
         </div>
-    </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Vikash . All Rights Reserved.</p>
-    </footer>
+        <div class="main-content">
+            
+            <div class="left-column">
+                
+                <h3>Key Metrics & Achievements</h3>
+                <div class="skill-group">
+                    <ul>
+                        [cite_start]<li>Delivered **95%+ on-time releases** across 8+ programs. [cite: 37]</li>
+                        [cite_start]<li>Scaled Agile practices across 8+ teams, **improving throughput by 20%**. [cite: 37]</li>
+                        [cite_start]<li>Expanded product reach to **4 new international markets**. [cite: 13, 37]</li>
+                        [cite_start]<li>Cut client payment integration time by **30%** (500+ clients). [cite: 37]</li>
+                    </ul>
+                </div>
+                
+                <h3>Expertise (Agile & Strategic)</h3>
+                <div class="skill-chips-list">
+                    [cite_start]<span class="chip">Certified ScrumMaster (CSM) [cite: 37]</span>
+                    [cite_start]<span class="chip">Agile, Scrum, Kanban, SAFe [cite: 36, 37]</span>
+                    [cite_start]<span class="chip">Release & Risk Management [cite: 37]</span>
+                    [cite_start]<span class="chip">OKR Alignment [cite: 37]</span>
+                    [cite_start]<span class="chip">Data-backed Decision Making [cite: 33, 37]</span>
+                    [cite_start]<span class="chip">Process Improvement [cite: 37]</span>
+                    <span class="chip">Fintech | Insurance | [cite_start]Travel Tech [cite: 3]</span>
+                </div>
+                
+                <h3>Tools & Platform Fluency</h3>
+                <div class="skill-chips-list">
+                    [cite_start]<span class="chip">JIRA & JQL [cite: 30, 34, 37]</span>
+                    [cite_start]<span class="chip">Confluence [cite: 34, 37]</span>
+                    [cite_start]<span class="chip">Salesforce [cite: 37]</span>
+                    [cite_start]<span class="chip">Clickup [cite: 37]</span>
+                </div>
+
+                <h3>Education</h3>
+                <div class="skill-group">
+                    <p><strong>MBA (PGDM)</strong> - Marketing/IT & Operations | BULMIM, New Delhi | [cite_start]2018 [cite: 37]</p>
+                    <p><strong>B.Tech</strong> - Mechanical Engineering | MDU | [cite_start]2014 [cite: 37]</p>
+                </div>
+
+            </div>
+            
+            <div class="right-column">
+                
+                <h3>Professional Track Record</h3>
+
+                <div class="job-card">
+                    <h4>Senior Manager - Tech Operations (Program Delivery) | Alike Travel Private Limited</h4>
+                    <span class="tenure">Aug 2025 – Present | [cite_start]Gurgaon [cite: 11]</span>
+                    <ul>
+                        [cite_start]<li>Spearheaded technology program delivery, leading a **13-member distributed Digital & Tech team** and aligning product outcomes with strategic business objectives. [cite: 12]</li>
+                        [cite_start]<li>Drove the successful launch of holiday packages in **4 new countries** with direct online booking, establishing Alike among the top 3 players in India. [cite: 13]</li>
+                        [cite_start]<li>Achieved faster time-to-market by improving release velocity through structured planning and proactive risk management. [cite: 14]</li>
+                    </ul>
+                </div>
+
+                <div class="job-card">
+                    <h4>Assistant Manager - Technical Program Management | Paytm Insurance Broking</h4>
+                    <span class="tenure">Sep 2024 – May 2025 | [cite_start]Remote [cite: 18]</span>
+                    <ul>
+                        [cite_start]<li>Delivered **95% on-time releases** and accelerated delivery by **20%** through optimized Scrum and Kanban frameworks. [cite: 20]</li>
+                        [cite_start]<li>Partnered with **60+ engineers** and **15+ stakeholders** to align delivery milestones across Motor, Health, and Embedded Insurance verticals. [cite: 19, 21]</li>
+                        [cite_start]<li>Enhanced visibility through improved program tracking, risk management, and milestone communication dashboards. [cite: 23]</li>
+                    </ul>
+                </div>
+
+                <div class="job-card">
+                    <h4>Assistant Manager - Technical Program Management | Paytm</h4>
+                    <span class="tenure">May 2020 – Sep 2024 | [cite_start]Noida (Remote) [cite: 26]</span>
+                    <ul>
+                        [cite_start]<li>Led cross-functional delivery for **90+ team members** across Payments and Merchant Product verticals. [cite: 27]</li>
+                        [cite_start]<li>Enhanced program efficiency by **20%** by streamlining delivery processes and implementing Agile/Scrum frameworks using JIRA. [cite: 30]</li>
+                        [cite_start]<li>Facilitated cross-team alignment in scaled agile environments, ensuring shared goals and dependency management. [cite: 35]</li>
+                        [cite_start]<li>Devised innovative solutions to **unblock stalled projects**, resolving conflicts through consensus-building. [cite: 33]</li>
+                    </ul>
+                </div>
+                
+                <div class="job-card">
+                    <h4>Senior Associate - Program Management | Paytm</h4>
+                    <span class="tenure">Jun 2018 - May 2020 | [cite_start]Noida [cite: 37]</span>
+                    <ul>
+                        [cite_start]<li>Drove merchant success by leading the onboarding and integration of payment solutions for **500+ clients**, cutting integration time by **30%**. [cite: 37]</li>
+                        [cite_start]<li>Maintained strict compliance with industry standards and regulations throughout the integration process, ensuring security and reliability. [cite: 37]</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
 </body>
 </html>
