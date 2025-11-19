@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vikash Yadav - Technical Program Manager</title>
+    <title>Vikash Yadav | Technical Program Manager</title>
     
     <style>
         :root {
-            --primary-color: #007bff; /* Blue for highlights */
-            --text-color: #333;
-            --secondary-text: #6c757d;
-            --bg-color: #f8f9fa;
-            --font-family: 'Arial', sans-serif;
+            --bg-color: #1e1e1e; /* Dark background */
+            --text-color: #ffffff; /* White text */
+            --accent-color: #00bcd4; /* High-contrast cyan accent */
+            --secondary-color: #b0bec5; /* Light gray for details */
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
@@ -21,86 +21,96 @@
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
         }
 
         .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 25px;
-            background: #fff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+            background: #282828; /* Slightly lighter inner background */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
 
         /* Header Styles */
         .header {
             text-align: center;
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
-
         .header h1 {
-            color: var(--primary-color);
+            color: var(--accent-color);
             margin: 0 0 5px 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            letter-spacing: 1px;
         }
-
         .header p {
             margin: 0;
-            font-size: 1.1em;
-            color: var(--secondary-text);
+            font-size: 1.2em;
+            color: var(--secondary-color);
         }
-
-        .contact-info {
-            font-size: 0.9em;
-            margin-top: 10px;
+        .contact-links {
+            margin-top: 15px;
         }
-        .contact-info a {
-            color: var(--primary-color);
+        .contact-links a {
+            color: var(--accent-color);
             text-decoration: none;
             margin: 0 10px;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        .contact-links a:hover {
+            color: var(--text-color);
         }
 
         /* Section Styles */
         h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid #eee;
+            color: var(--accent-color);
+            border-bottom: 2px solid #3a3a3a;
             padding-bottom: 5px;
-            margin-top: 30px;
+            margin-top: 40px;
+            font-size: 1.8em;
         }
 
-        .section-content {
-            padding-left: 20px;
-        }
-
-        /* Experience Styles */
-        .job {
+        /* Experience and Skills Layout */
+        .job, .skill-group {
             margin-bottom: 20px;
             padding: 15px;
-            border-left: 3px solid var(--primary-color);
-            background: #fafafa;
+            border-left: 3px solid var(--accent-color);
+            background: #333333;
+            border-radius: 4px;
         }
-
         .job h3 {
             margin: 0;
-            font-size: 1.2em;
             color: var(--text-color);
+            font-size: 1.1em;
         }
-
         .job p.tenure {
             font-size: 0.9em;
-            color: var(--secondary-text);
+            color: var(--secondary-color);
             margin: 5px 0 10px 0;
         }
-
         .job ul {
             list-style: disc;
             margin: 10px 0 0 20px;
             padding: 0;
+            color: var(--secondary-color);
         }
-        .job ul li {
-            margin-bottom: 5px;
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .skill-chip {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -109,83 +119,79 @@
     <div class="container">
         <div class="header">
             [cite_start]<h1>Vikash Yadav [cite: 1]</h1>
-            <p>Technical Program Manager | Agile Delivery | [cite_start]Cross-Functional Leadership [cite: 2]</p>
-            <div class="contact-info">
-                New Delhi, India &bull; +91-8588890069 &bull; <a href="mailto:vikashrsy@gmail.com">vikashrsy@gmail.com</a>
-                [cite_start]<a href="https://linkedin.com/in/vikashyadav21/" target="_blank">LinkedIn Profile</a> [cite: 3]
+            <p>Technical Program Manager | [cite_start]CSM® [cite: 2, 6] </p>
+            <div class="contact-links">
+                <a href="mailto:vikashrsy@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/vikashyadav21/" target="_blank">LinkedIn</a>
+                <a href="tel:+918588890069">Phone</a>
             </div>
         </div>
 
-        <div class="section-summary">
-            <h2>Professional Profile</h2>
+        <section>
+            [cite_start]<h2>Summary [cite: 4]</h2>
             <p>
-                [cite_start]Results-driven Technical Program Manager & Certified ScrumMaster® with 7+ years of experience delivering large-scale digital programs across Fintech, Insurance, and Travel Tech domains[cite: 6].
-                [cite_start]Proven track record in driving Agile transformation, stakeholder alignment, and program governance, achieving up to 20% faster time-to-market and 95%+ on-time delivery[cite: 7].
-                [cite_start]Experienced in leading distributed teams across remote, multi-time-zone environments[cite: 8].
+                [cite_start]Results-driven Technical Program Manager & Certified ScrumMaster® with 7+ years of experience delivering large-scale digital programs across Fintech, Insurance, and Travel Tech domains[cite: 6]. [cite_start]Proven track record in driving Agile transformation, stakeholder alignment, and program governance, achieving up to 20% faster time-to-market and 95%+ on-time delivery[cite: 7]. [cite_start]Experienced in leading distributed teams across remote, multi-time-zone environments[cite: 8].
             </p>
-            
-            <p style="margin-top: 15px; font-weight: bold;">
-                FINTECH &bull; INSURANCE &bull; TRAVEL TECH
-            </p>
-        </div>
+        </section>
 
-        [cite_start]<h2>Experience [cite: 5]</h2>
-        <div class="section-content">
+        <section>
+            [cite_start]<h2>Experience [cite: 5]</h2>
 
             <div class="job">
-                <h3>Senior Manager - Technology Operations (Program Delivery Focus) | [cite_start]Alike Travel Private Limited [cite: 9, 10]</h3>
+                [cite_start]<h3>Senior Manager - Technology Operations (Program Delivery Focus) [cite: 10] | [cite_start]Alike Travel Private Limited [cite: 9]</h3>
                 <p class="tenure">Aug 2025 – Present | [cite_start]Gurgaon [cite: 11]</p>
                 <ul>
-                    [cite_start]<li>Spearheaded technology program delivery, leading a 13-member distributed Digital & Tech team and aligning product outcomes with strategic business objectives[cite: 12].</li>
-                    [cite_start]<li>Drove successful launch of holiday packages in 4 new countries, positioning Alike among the top 3 players in India[cite: 13].</li>
-                    [cite_start]<li>Achieved faster time-to-market by improving release velocity through structured planning and proactive risk management[cite: 14].</li>
+                    [cite_start]<li>Spearheaded technology program delivery, successfully leading a 13-member distributed Digital & Tech team[cite: 12].</li>
+                    [cite_start]<li>Drove the successful launch of holiday packages in 4 new countries[cite: 13].</li>
+                    [cite_start]<li>Achieved faster time-to-market by improving release velocity[cite: 14].</li>
                 </ul>
             </div>
 
             <div class="job">
-                <h3>Assistant Manager - Technical Program Management | [cite_start]Paytm Insurance Broking [cite: 17, 16]</h3>
+                [cite_start]<h3>Assistant Manager - Technical Program Management [cite: 17] | [cite_start]Paytm Insurance Broking [cite: 16]</h3>
                 <p class="tenure">Sep 2024 – May 2025 | [cite_start]Remote [cite: 18]</p>
                 <ul>
                     [cite_start]<li>Delivered 95% on-time releases and accelerated delivery by 20% through optimized Scrum and Kanban frameworks[cite: 20].</li>
-                    [cite_start]<li>Partnered with 60+ engineers and 15+ product/business stakeholders to align delivery milestones with strategic objectives[cite: 21].</li>
+                    [cite_start]<li>Partnered with 60+ engineers and 15+ product/business stakeholders[cite: 21].</li>
                     [cite_start]<li>Enhanced visibility through improved program tracking, risk management, and milestone communication dashboards[cite: 23].</li>
                 </ul>
             </div>
             
             <div class="job">
-                <h3>Assistant Manager - Technical Program Management | [cite_start]Paytm [cite: 25, 24]</h3>
+                [cite_start]<h3>Assistant Manager - Technical Program Management [cite: 25] | [cite_start]Paytm [cite: 24]</h3>
                 <p class="tenure">May 2020 – Sep 2024 | [cite_start]Noida (Remote) [cite: 26]</p>
                 <ul>
-                    [cite_start]<li>Enhanced program efficiency by 20% by streamlining delivery processes and implementing Agile/Scrum frameworks using JIRA[cite: 30].</li>
-                    [cite_start]<li>Led Scrum ceremonies and milestone tracking, maintaining a 95% on-time delivery rate through clear accountability[cite: 32].</li>
-                    [cite_start]<li>Facilitated cross-team alignment in scaled agile environments, ensuring shared goals, dependency management, and coordinated release cycles[cite: 35].</li>
+                    [cite_start]<li>Enhanced program efficiency by 20% by streamlining delivery processes using JIRA[cite: 30].</li>
+                    [cite_start]<li>Led cross-functional delivery for 90+ team members across Payments and Merchant Product verticals[cite: 27].</li>
+                    [cite_start]<li>Maintained a 95% on-time delivery rate through clear accountability and continuous improvement[cite: 32].</li>
+                    [cite_start]<li>Improved sprint and release visibility by integrating JIRA and Confluence[cite: 34].</li>
                 </ul>
             </div>
-            
-            <div class="job">
-                <h3>Senior Associate - Program Management | [cite_start]Paytm [cite: 37]</h3>
-                <p class="tenure">Jun 2018 – May 2020 | [cite_start]Noida [cite: 37]</p>
-                <ul>
-                    [cite_start]<li>Drove merchant success by leading the onboarding and integration of payment solutions for 500+ clients, cutting integration time by 30%[cite: 37].</li>
-                    [cite_start]<li>Maintained strict compliance with industry standards and regulations throughout the integration process[cite: 37].</li>
-                </ul>
-            </div>
-        </div>
+        </section>
         
-        <h2>Key Skills & Tools</h2>
-        <div class="section-content">
-            [cite_start]<p><strong>Agile Delivery & Leadership:</strong> Agile, Scrum, Kanban, Scaled Agile (SAFe), Release Management, Cross-Functional Leadership, Continuous Improvement[cite: 37].</p>
-            [cite_start]<p><strong>Strategic & Analytical:</strong> OKR Alignment, Process Improvement, Data-backed Decision Making, Program Governance, Dependency Management[cite: 37].</p>
-            [cite_start]<p><strong>Tools & Platforms:</strong> JIRA, JQL, Confluence, Clickup, Salesforce, Google Workspace[cite: 37].</p>
-        </div>
+        <section>
+            <h2>Skills & Tools</h2>
+            <div class="skills-list">
+                [cite_start]<span class="skill-chip">Agile [cite: 37]</span>
+                [cite_start]<span class="skill-chip">Scrum, Kanban, SAFe [cite: 37]</span>
+                [cite_start]<span class="skill-chip">Release Management [cite: 37]</span>
+                [cite_start]<span class="skill-chip">Risk & Change Management [cite: 37]</span>
+                [cite_start]<span class="skill-chip">JIRA, JQL, Confluence [cite: 37]</span>
+                [cite_start]<span class="skill-chip">Salesforce, Clickup [cite: 37]</span>
+                [cite_start]<span class="skill-chip">OKR Alignment [cite: 37]</span>
+                [cite_start]<span class="skill-chip">Stakeholder Engagement [cite: 37]</span>
+                [cite_start]<span class="skill-chip">Metrics-driven Delivery [cite: 37]</span>
+            </div>
+        </section>
 
-        <h2>Certifications & Education</h2>
-        <div class="section-content">
-            <p><strong>Certified ScrumMaster (CSM)</strong> | Scrum Alliance | [cite_start]Jul 2024 [cite: 37]</p>
-            <p><strong>Six Sigma White Belt</strong> | [cite_start]Aug 2024 [cite: 37]</p>
-            <p><strong>MBA (PGDM) - Marketing and IT & Operations</strong> | BULMIM, New Delhi | [cite_start]2018 [cite: 37]</p>
-            <p><strong>B.Tech - Mechanical Engineering</strong> | MDU | [cite_start]2014 [cite: 37]</p>
-        </div>
+        <section>
+            <h2>Certifications & Education</h2>
+            <div class="skill-group">
+                <p><strong>Certified ScrumMaster (CSM)</strong> | Scrum Alliance | [cite_start]Jul 2024 [cite: 37]</p>
+                <p><strong>Six Sigma White Belt</strong> | [cite_start]Aug 2024 [cite: 37]</p>
+                <p><strong>MBA (PGDM)</strong> - Marketing and IT & Operations | BULMIM, New Delhi | [cite_start]2018 [cite: 37]</p>
+            </div>
+        </section>
         
     </div>
 
